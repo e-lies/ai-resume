@@ -1,0 +1,491 @@
+:root {
+  --fond: #f7f7f5;
+  --surface: #ffffff;
+  --bordure: #e2e1dc;
+  --texte: #1c1b19;
+  --texte-doux: #6b6862;
+  --accent: #2f6f4f;
+  --accent-doux: #e8f0eb;
+  --erreur: #9b2c2c;
+  --erreur-doux: #fbeaea;
+  --rayon: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #17171a;
+    --surface: #1f1f23;
+    --bordure: #34343a;
+    --texte: #ececea;
+    --texte-doux: #9a9a95;
+    --accent: #6fbf94;
+    --accent-doux: #22312a;
+    --erreur: #f1a3a3;
+    --erreur-doux: #3a2121;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  line-height: 1.55;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.entete h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+}
+
+.sous-titre {
+  margin: 4px 0 0;
+  color: var(--texte-doux);
+}
+
+.etat {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+  color: var(--texte-doux);
+}
+
+.alerte {
+  color: var(--erreur);
+  font-weight: 600;
+}
+
+.colonnes {
+  display: grid;
+  grid-template-columns: minmax(280px, 380px) 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-top: 28px;
+}
+
+@media (max-width: 900px) {
+  .colonnes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panneau {
+  background: var(--surface);
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 20px;
+}
+
+.panneau h2 {
+  margin: 0 0 16px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--texte-doux);
+}
+
+.depot {
+  border: 2px dashed var(--bordure);
+  border-radius: var(--rayon);
+  padding: 28px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.depot:hover,
+.depot-survol {
+  border-color: var(--accent);
+  background: var(--accent-doux);
+}
+
+.depot-titre {
+  margin: 0;
+  font-weight: 600;
+}
+
+.depot-detail {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: var(--texte-doux);
+}
+
+.liste-fichiers {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ligne-fichier {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.85rem;
+  padding: 6px 8px;
+  border-radius: 6px;
+  background: var(--fond);
+}
+
+.nom-fichier {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.etat-fichier {
+  color: var(--texte-doux);
+  flex-shrink: 0;
+  max-width: 55%;
+  text-align: right;
+}
+
+.etat-ok .etat-fichier {
+  color: var(--accent);
+}
+
+.etat-erreur {
+  background: var(--erreur-doux);
+}
+
+.etat-erreur .etat-fichier {
+  color: var(--erreur);
+}
+
+.formulaire textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  background: var(--fond);
+  color: var(--texte);
+  font: inherit;
+  resize: vertical;
+}
+
+.formulaire textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.barre-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 18px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.lien {
+  border: none;
+  background: none;
+  color: var(--accent);
+  padding: 0;
+  text-decoration: underline;
+}
+
+.criteres {
+  margin-top: 20px;
+  padding: 14px 16px;
+  background: var(--accent-doux);
+  border-radius: var(--rayon);
+}
+
+.criteres h3 {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--texte-doux);
+}
+
+.criteres ul {
+  margin: 0 0 10px;
+  padding-left: 18px;
+}
+
+.sql {
+  margin: 10px 0 0;
+  padding: 10px;
+  background: var(--surface);
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.barre-resultats {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin: 18px 0 10px;
+}
+
+.compte {
+  margin: 0;
+  font-weight: 600;
+}
+
+.resultats {
+  display: grid;
+  gap: 12px;
+}
+
+.fiche {
+  border: 1px solid var(--bordure);
+  border-radius: var(--rayon);
+  padding: 14px 16px;
+}
+
+.fiche-entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.fiche-entete h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  word-break: break-all;
+}
+
+.fiche-diplome {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  color: var(--texte-doux);
+}
+
+.fiche-langues,
+.fiche-fonctions {
+  margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.option-classer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--texte-doux);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+.question-verification {
+  margin: 8px 0 0;
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--texte-doux);
+}
+
+.etiquette-score {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.etiquette-fonction {
+  background: var(--accent-doux);
+  border-color: transparent;
+  color: var(--texte);
+}
+
+.etiquette {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--bordure);
+  font-size: 0.75rem;
+  color: var(--texte-doux);
+}
+
+.etiquette-diplome {
+  border-color: var(--accent);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.fiche-competences {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2px 16px;
+}
+
+.fiche-competences li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.82rem;
+  border-bottom: 1px dotted var(--bordure);
+  padding: 3px 0;
+}
+
+.competence-nom {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.duree {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.duree-declaree {
+  color: var(--texte-doux);
+  font-style: italic;
+}
+
+.fiche-sections {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--bordure);
+  font-size: 0.85rem;
+}
+
+.parcours {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.parcours-titre {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.parcours-periode {
+  margin: 1px 0 0;
+  font-size: 0.78rem;
+  color: var(--texte-doux);
+}
+
+.parcours-description {
+  margin: 5px 0 0;
+  font-size: 0.85rem;
+}
+
+.notes {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.note-entree {
+  padding: 8px 10px;
+  background: var(--fond);
+  border-radius: 8px;
+}
+
+.note-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--texte-doux);
+}
+
+.note-retirer {
+  margin-left: auto;
+  font-size: 0.75rem;
+}
+
+.note-contenu {
+  margin: 4px 0 0;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+}
+
+.note-formulaire {
+  display: grid;
+  gap: 6px;
+  justify-items: start;
+}
+
+.note-formulaire input,
+.note-formulaire textarea {
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--texte);
+  font: inherit;
+  font-size: 0.85rem;
+  resize: vertical;
+}
+
+.note-formulaire button {
+  padding: 5px 14px;
+  font-size: 0.85rem;
+}
+
+.note {
+  color: var(--texte-doux);
+  font-size: 0.85rem;
+}
+
+.erreur {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: var(--erreur-doux);
+  color: var(--erreur);
+  border-radius: 8px;
+  font-size: 0.88rem;
+}
+
+.pied {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid var(--bordure);
+  font-size: 0.8rem;
+  color: var(--texte-doux);
+}
+
+code {
+  font-size: 0.85em;
+  background: var(--fond);
+  padding: 1px 5px;
+  border-radius: 4px;
+}

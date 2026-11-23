@@ -1,0 +1,32 @@
+PROFIL C — CV fictif de démonstration
+
+FORMATION
+Baccalauréat en communication, Université du Québec, 2017
+DEC en sciences humaines, Cégep de Drummondville, 2014
+
+LANGUES
+Français — langue maternelle
+Anglais — courant, usage quotidien au travail
+
+EXPÉRIENCE
+
+Superviseure d'équipe — Centre de relation client, Assurances Boisvert
+Janvier 2021 à aujourd'hui
+Supervision d'une équipe de douze agents en centre d'appel. Suivi des indicateurs
+de service, encadrement et formation des nouveaux agents. Outils : Genesys,
+Salesforce Service Cloud.
+
+Agente au service à la clientèle — Télécom Rivard
+Septembre 2017 à décembre 2020
+Réception d'appels entrants, résolution de plaintes, vente complémentaire.
+Environnement de centre d'appel, volume élevé. Outils : Zendesk, Excel.
+
+Préposée à l'accueil — Clinique Sainte-Anne
+Été 2015 et été 2016
+Accueil des patients, prise de rendez-vous.
+
+COMPÉTENCES
+Gestion d'équipe, rédaction de procédures, Excel, Salesforce
+
+Note : ce CV n'emploie jamais le mot « call center ». Il sert à vérifier qu'une
+recherche formulée en anglais retrouve bien la formulation française du corpus.

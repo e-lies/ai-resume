@@ -1,0 +1,25 @@
+PROFIL A — CV fictif de démonstration
+
+FORMATION
+Maîtrise en informatique, Université de Montréal, 2016
+Baccalauréat en génie logiciel, Université Laval, 2014
+
+LANGUES
+Français — langue maternelle
+Anglais — courant (C1)
+Espagnol — notions
+
+EXPÉRIENCE PROFESSIONNELLE
+
+Développeuse principale, Coopérative Nord (2020-03 à aujourd'hui)
+Conception d'une plateforme d'ingestion de données. Stack : Python, Django,
+PostgreSQL, Docker. Mise en place de la chaîne CI et du déploiement Kubernetes.
+
+Développeuse, Studio Beaulieu (2017-01 à 2020-02)
+Développement d'API internes en Python 3 et Node.js. Base de données Postgres.
+
+Stagiaire en analyse, Groupe Rivière (2016-05 à 2016-12)
+Scripts d'analyse en R et tableaux de bord Power BI.
+
+COMPÉTENCES
+Git, Terraform, méthodes agiles, rédaction technique

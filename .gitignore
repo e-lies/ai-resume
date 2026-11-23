@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+.env
+*.db
+*.sqlite3
+
+node_modules/
+web/dist/
+
+# Les CV sont des renseignements personnels : rien de réel ne doit être versionné.
+corpus/

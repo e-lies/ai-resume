@@ -1,0 +1,26 @@
+PROFIL B — CV fictif de démonstration
+
+FORMATION
+DEC en techniques de l'informatique, Cégep de Sainte-Foy, 2019
+
+LANGUES
+Français : langue maternelle
+Anglais : intermédiaire
+
+PARCOURS
+
+Technicien en soutien applicatif — Ville de Saint-Clair
+Mars 2021 à décembre 2024
+Soutien aux applications internes, scripts d'automatisation en PowerShell,
+requêtes SQL Server pour la production de rapports.
+
+Technicien informatique — Commerce Lavigne
+Août 2019 à février 2021
+Gestion du parc, déploiements Windows, documentation.
+
+COMPÉTENCES TECHNIQUES
+SQL Server, PowerShell, Python, Active Directory, ITIL
+
+Note : la mention « Python » figure ici sans être rattachée à un poste daté.
+Ce profil sert à vérifier que le filtre distingue une compétence déclarée
+d'une expérience mesurable.
